@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício Notas</title>
+  </head>
+  <body>
+    <script src="./ExercNota.js">
+      // Ler 3 notas através do document.prompt
+      // Calcular a média das notas
+      // Se a média ficar entre 9 e 10 deve ser mostrado no html a mensagem através do document.write: Aprovado com nota excelente
+      // Se a média ficar entre 7 e 8 (não incluso) deve ser mostrado no html a mensagem através do document.write: Aprovado com uma nota boa
+      // Se a média ficar abaixo de 7 deve ser solicitado uma outra nota através do document.prompt que será a nota de recuperação.
+      // Se a nota de recuperação for maior que 6 deve ser mostra
+
+      let nota1 = parseFloat(prompt('Digite a 1° nota do aluno'));
+      let nota2 = parseFloat(prompt('Digite a 2° nota do aluno'));
+      let nota3 = parseFloat(prompt('Digite a 3° nota do aluno'));
+
+      let media = (nota1 + nota2 + nota3) / 3;
+
+      if (media >= 9) {
+        document.write('Aprovado com nota excelente');
+      } else if (media < 9 && media > 6) {
+        document.write('Aprovado com uma boa nota');
+      } else {
+        const recuperação = parseFloat(prompt('Digite a nota de recuperação'));
+      }
+      if (recuperação >= 7) {
+        document.write('Aprovado com nota de recuperação');
+      }
+      else{
+        document.write('Nota de recuperação abaixo da média. Reprovado');
+      }
+    </script>
+  </body>
+</html>
